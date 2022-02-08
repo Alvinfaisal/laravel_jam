@@ -173,7 +173,10 @@
                                 <img src="{{ asset('img/' . $product->image) }}" alt="Product Image">
                             </div>
                             <div class="product-content">
-                                <h2>{{ $product->name }}</h2>
+                                <h2>
+                                    <a
+                                        href="{{ route('single_product', ['id' => $product->id]) }}">{{ $product->name }}</a>
+                                </h2>
 
 
                                 @if ($product->sale_price != null)
